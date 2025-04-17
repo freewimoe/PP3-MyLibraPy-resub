@@ -75,25 +75,25 @@ You can immediately press [2] to explore.
 
 A few glimpses of the interface in use:
 - ** Full App Flow (Heroku):**
-  ![Workflow GIF](../media/workflow.gif)
+  ![Workflow GIF](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/workflow.gif)
 
 - **Banner / Welcome**:  
-  ![Menu](../media/banner.png)
+  ![Menu](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/banner.png)
 
   - **App Startup (Console View)**:  
-  ![Console](../media/console_start.png)
+  ![Console](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/console_start.png)
 
 - **Main Menu**:  
-  ![Menu](../media/menu.png)
+  ![Menu](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/menu.png)
 
 - **Add Book Dialog**:  
-  ![Add Book](../media/add_book.png)
+  ![Add Book](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/add_book.png)
 
 - **Book List View**:  
-  ![View Books](../media/view_books.png)
+  ![View Books](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/view_books.png)
 
 - **Library Statistics**:  
-  ![Statistics](../media/statistics.png)
+  ![Statistics](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/statistics.png)
 
 
 ---
