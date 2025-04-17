@@ -75,26 +75,25 @@ You can immediately press [2] to explore.
 
 A few glimpses of the interface in use:
 - ** Full App Flow (Heroku):**
-  ![Workflow GIF](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/workflow.gif)
+  ![Workflow GIF](media/workflow.gif)
 
 - **Banner / Welcome**:  
-  ![Menu](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/banner.png)
+  ![Menu](media/banner.png)
 
   - **App Startup (Console View)**:  
-  ![Console](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/console_start.png)
+  ![Console](media/console_start.png)
 
 - **Main Menu**:  
-  ![Menu](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/menu.png)
+  ![Menu](media/menu.png)
 
 - **Add Book Dialog**:  
   ![Add Book](media/add_book.png)
 
 - **Book List View**:  
-  ![View Books](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/view_books.png)
+  ![View Books](media/view_books.png)
 
 - **Library Statistics**:  
-  ![Statistics](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/statistics.png)
-
+  ![Statistics](media/statistics.png)
 
 ---
 
@@ -133,7 +132,7 @@ All functions were tested in:
 ## 🚀 Run it Yourself
 
 1. Clone this repository:
-   
+
 ```bash
    git clone https://github.com/freewimoe/MyLibraPy-PP3.git
    cd MyLibraPy-PP3
@@ -150,20 +149,16 @@ All functions were tested in:
 
 
 3. Install the required package:
-   
+
 ```bash
    pip install -r requirements.txt
-
 
 4. Launch the app:
    
 ```bash
    python main.py
 
-
 ---
-
-
 
 ## 📦 Dependencies
 
