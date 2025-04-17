@@ -87,7 +87,7 @@ A few glimpses of the interface in use:
   ![Menu](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/menu.png)
 
 - **Add Book Dialog**:  
-  ![Add Book](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/add_book.png)
+  ![Add Book](https://github.com/freewimoe/MyLibraPy-PP3/blob/main/media/add_book.png)
 
 - **Book List View**:  
   ![View Books](https://raw.githubusercontent.com/freewimoe/MyLibraPy-PP3/main/media/view_books.png)
