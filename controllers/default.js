@@ -2,11 +2,11 @@ const Pty = require('node-pty');
 const fs = require('fs');
 
 exports.install = function () {
-
-    ROUTE('/');
+    ROUTE('/');               // Terminal site
+    ROUTE('/about');          // About-page
     WEBSOCKET('/', socket, ['raw']);
-
 };
+
 
 function socket() {
 
