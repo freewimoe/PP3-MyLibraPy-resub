@@ -16,7 +16,7 @@
           __/ |                                __/ |
          |___/                                |___/ 
 
-
+```
 A simple CLI library manager – built for learning, testing, and practical use in school settings
 
 ---
