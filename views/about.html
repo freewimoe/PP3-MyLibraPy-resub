@@ -4,47 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <title>About MyLibraPy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            padding: 40px;
-            max-width: 800px;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 700px;
             margin: auto;
         }
+
         h1 {
             color: #E84610;
+            font-size: 2rem;
         }
+
         a {
             color: #E84610;
             text-decoration: none;
         }
+
         .button {
             display: inline-block;
             background-color: #E84610;
             color: white;
-            padding: 10px 20px;
-            margin-top: 20px;
+            padding: 0.8rem 1.5rem;
+            margin-top: 1.5rem;
+            border-radius: 6px;
             text-transform: uppercase;
-            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>📚 Welcome to MyLibraPy!</h1>
-    <p>
-        This is a personal library tracker that helps you manage your books via the command line.
-        You can add, search, edit, delete and export your book collection.
-    </p>
-    <p>
-        The interface you see here uses <strong>xterm.js</strong> to simulate a terminal in the browser.
-        All code is written in Python and runs via Heroku.
-    </p>
-    <p>
-        🔗 View the source code on <a href="https://github.com/freewimoe/MyLibraPy-PP3" target="_blank">GitHub</a>.
-    </p>
+    <div class="container">
+        <h1>📚 Welcome to MyLibraPy!</h1>
+        <p>
+            MyLibraPy is a command-line library tracker built with Python.
+            It allows you to manage your book collection directly from a web-based terminal.
+        </p>
+        <p>
+            The interface uses <strong>xterm.js</strong> and is hosted on Heroku.
+        </p>
+        <p>
+            🔗 <a href="https://github.com/freewimoe/MyLibraPy-PP3" target="_blank">View the code on GitHub</a>
+        </p>
 
-    <a class="button" href="/">⬅ Back to Terminal</a>
+        <a class="button" href="/">⬅ Back to Terminal</a>
+    </div>
 </body>
 </html>
-<!-- This is a simple HTML page that provides information about the MyLibraPy project. It includes a title, description, and a link to the GitHub repository. The page is styled with CSS for better presentation. -->
