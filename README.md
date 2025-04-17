@@ -75,25 +75,25 @@ You can immediately press [2] to explore.
 
 A few glimpses of the interface in use:
 - ** Full App Flow (Heroku):**
-  ![Workflow GIF](media/workflow.gif?raw=true)
+  ![Workflow GIF](../media/workflow.gif)
 
 - **Banner / Welcome**:  
-  ![Menu](media/banner.png?raw=true)
+  ![Menu](../media/banner.png)
 
   - **App Startup (Console View)**:  
-  ![Console](media/console_start.png?raw=true)
+  ![Console](../media/console_start.png)
 
 - **Main Menu**:  
-  ![Menu](media/menu.png?raw=true)
+  ![Menu](../media/menu.png)
 
 - **Add Book Dialog**:  
-  ![Add Book](media/add_book.png?raw=true)
+  ![Add Book](../media/add_book.png)
 
 - **Book List View**:  
-  ![View Books](media/view_books.png?raw=true)
+  ![View Books](../media/view_books.png)
 
 - **Library Statistics**:  
-  ![Statistics](media/statistics.png?raw=true)
+  ![Statistics](../media/statistics.png)
 
 
 ---
