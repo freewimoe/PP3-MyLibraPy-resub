@@ -7,6 +7,9 @@ from colorama import init, Fore, Style
 from collections import Counter
 init(autoreset=True)
 
+# Constants for error messages
+ERROR_INVALID_BOOK_NUMBER = "\n[Error] Invalid book number.\n"
+
 def display_banner():
     print(r"""
   __  __       _      _ _               _____       
@@ -122,7 +125,7 @@ def edit_book():
     try:
         index = int(input("Enter the number of the book you want to edit: ")) - 1
         if index < 0 or index >= len(books):
-            print(Fore.RED + "\n[Error] Invalid book number.\n")
+            print(Fore.RED + ERROR_INVALID_BOOK_NUMBER)
             return
     except ValueError:
         print(Fore.RED + "\n[Error] Please enter a valid number.\n")
@@ -150,7 +153,7 @@ def edit_book():
 
 
 def delete_book():
-    print(Fore.RED + "\n[Error] Invalid book number.\n")
+    print("\n--- Delete a Book ---")
 
     view_books()
     if not books:
@@ -159,7 +162,7 @@ def delete_book():
     try:
         index = int(input("Enter the number of the book you want to delete: ")) - 1
         if index < 0 or index >= len(books):
-            print("\n[Error] Invalid book number.\n")
+            print(ERROR_INVALID_BOOK_NUMBER)
             return
     except ValueError:
         print("\n[Error] Please enter a valid number.\n")
