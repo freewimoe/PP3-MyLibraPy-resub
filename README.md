@@ -117,17 +117,28 @@ All functions were tested in:
 - Error handling for invalid menu choices
 - Input validation for book numbers
 
-### Code Quality & Validation:
-- **PEP8 Validation**: Code tested with Python linter
-  - All major PEP8 issues resolved
-  - Consistent indentation (4 spaces)
-  - Line length under 79 characters
-  - Duplicate string literals replaced with constants
-- **Manual Testing Results**: 
-  - ✅ All core features functional
-  - ✅ Error handling works as expected
-  - ✅ Data persistence confirmed
-  - ✅ User input validation active
+### Code Quality & Validation
+
+#### PEP8 Validation Results
+- **Tool Used**: flake8 (Python Code Linter)
+- **Result**: ✅ **PASSED** - No PEP8 violations found
+- **Screenshot Evidence**: 
+
+![PEP8 Validation Success](media/flake8_success.png)
+
+**Validation Details**:
+- All imports moved to top of file
+- Consistent indentation (4 spaces)
+- Line length under 79 characters
+- Proper blank lines between functions
+- No trailing whitespace
+- Duplicate string literals replaced with constants
+
+#### Manual Testing Results
+- ✅ All core features functional
+- ✅ Error handling works as expected
+- ✅ Data persistence confirmed
+- ✅ User input validation active
 
 ### Testing Process:
 1. **Input Validation Tests**:

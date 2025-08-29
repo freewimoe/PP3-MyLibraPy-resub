@@ -1,27 +1,30 @@
-data_file = "books.json"
-
+import csv  # ganz oben im Importbereich ergänzen
 import sys
 import json
 import os
 from colorama import init, Fore, Style
 from collections import Counter
+
 init(autoreset=True)
 
-# Constants for error messages
+# Constants
+data_file = "books.json"
 ERROR_INVALID_BOOK_NUMBER = "\n[Error] Invalid book number.\n"
+
 
 def display_banner():
     print(r"""
-  __  __       _      _ _               _____       
- |  \/  |     | |    (_) |             |  __ \      
- | \  / |_   _| |     _| |__  _ __ __ _| |__) |   _ 
+  __  __       _      _ _               _____
+ |  \/  |     | |    (_) |             |  __ \
+ | \  / |_   _| |     _| |__  _ __ __ _| |__) |   _
  | |\/| | | | | |    | | '_ \| '__/ _` |  ___/ | | |
  | |  | | |_| | |____| | |_) | | | (_| | |   | |_| |
  |_|  |_|\__, |______|_|_.__/|_|  \__,_|_|    \__, |
           __/ |                                __/ |
-         |___/                                |___/ 
+         |___/                                |___/
 """)
     print("Welcome to MyLibraPy - your personal CLI book tracker!\n")
+
 
 def main_menu():
     print(Fore.CYAN + "Please choose an option:" + Style.RESET_ALL)
@@ -34,6 +37,7 @@ def main_menu():
     print("[6] Export book data")
     print("[7] Show statistics")
     print("[0] Exit")
+
 
 def save_books():
     try:
@@ -52,6 +56,7 @@ def load_books():
         except Exception as e:
             print(Fore.RED + f"\n[Error] Failed to load data: {e}\n")
     return []
+
 
 # Placeholder for book list
 books = load_books()
@@ -89,13 +94,19 @@ def view_books():
         return
 
     for i, book in enumerate(books, 1):
-        print(f"{i}. {book['title']} by {book['author']} - {book['genre']} ({book['status']})")
+        print(
+            f"{i}. {
+                book['title']} by {
+                book['author']} - {
+                book['genre']} ({
+                    book['status']})")
     print()
 
 
 def search_books():
     print("\n--- Search Books ---")
-    keyword = input("Enter a keyword (title, author, or genre): ").strip().lower()
+    keyword = input(
+        "Enter a keyword (title, author, or genre): ").strip().lower()
 
     if not keyword:
         print(Fore.YELLOW + "\n[Notice] No keyword entered.\n")
@@ -111,7 +122,12 @@ def search_books():
     if results:
         print(Fore.CYAN + f"\nFound {len(results)} matching book(s):\n")
         for i, book in enumerate(results, 1):
-            print(f"{i}. {book['title']} by {book['author']} - {book['genre']} ({book['status']})")
+            print(
+                f"{i}. {
+                    book['title']} by {
+                    book['author']} - {
+                    book['genre']} ({
+                    book['status']})")
     else:
         print(Fore.RED + "\nNo matching books found.\n")
 
@@ -123,7 +139,8 @@ def edit_book():
         return
 
     try:
-        index = int(input("Enter the number of the book you want to edit: ")) - 1
+        index = int(
+            input("Enter the number of the book you want to edit: ")) - 1
         if index < 0 or index >= len(books):
             print(Fore.RED + ERROR_INVALID_BOOK_NUMBER)
             return
@@ -134,10 +151,18 @@ def edit_book():
     book = books[index]
     print(f"\nEditing '{book['title']}' by {book['author']}:\n")
 
-    new_title = input(f"New title (leave blank to keep '{book['title']}'): ").strip()
-    new_author = input(f"New author (leave blank to keep '{book['author']}'): ").strip()
-    new_genre = input(f"New genre (leave blank to keep '{book['genre']}'): ").strip()
-    new_status = input(f"New status (leave blank to keep '{book['status']}'): ").strip().lower()
+    new_title = input(
+        f"New title (leave blank to keep '{
+            book['title']}'): ").strip()
+    new_author = input(
+        f"New author (leave blank to keep '{
+            book['author']}'): ").strip()
+    new_genre = input(
+        f"New genre (leave blank to keep '{
+            book['genre']}'): ").strip()
+    new_status = input(
+        f"New status (leave blank to keep '{
+            book['status']}'): ").strip().lower()
 
     if new_title:
         book['title'] = new_title
@@ -160,7 +185,8 @@ def delete_book():
         return
 
     try:
-        index = int(input("Enter the number of the book you want to delete: ")) - 1
+        index = int(
+            input("Enter the number of the book you want to delete: ")) - 1
         if index < 0 or index >= len(books):
             print(ERROR_INVALID_BOOK_NUMBER)
             return
@@ -169,17 +195,21 @@ def delete_book():
         return
 
     book = books[index]
-    confirm = input(f"Are you sure you want to delete '{book['title']}' by {book['author']}? (y/n): ").strip().lower()
+    confirm = input(
+        f"Are you sure you want to delete '{
+            book['title']}' by {
+            book['author']}? (y/n): ").strip().lower()
     if confirm == "y":
         deleted = books.pop(index)
         save_books()
-        print(Fore.GREEN + f"\n[Success] '{deleted['title']}' was deleted from your library.\n")
+        print(
+            Fore.GREEN +
+            f"\n[Success] '{
+                deleted['title']}' was deleted from your library.\n")
 
     else:
         print(Fore.YELLOW + "\n[Cancelled] No book was deleted.\n")
 
-
-import csv  # ganz oben im Importbereich ergänzen
 
 def export_books():
     if not books:
@@ -203,14 +233,16 @@ def export_books():
 
 def show_statistics():
     print("\n--- Library Statistics ---")
-    
+
     if not books:
         print(Fore.YELLOW + "\n[Notice] Your library is currently empty.\n")
         return
 
     total = len(books)
-    genres = Counter(book["genre"].lower() for book in books if book.get("genre"))
-    statuses = Counter(book["status"].lower() for book in books if book.get("status"))
+    genres = Counter(book["genre"].lower()
+                     for book in books if book.get("genre"))
+    statuses = Counter(book["status"].lower()
+                       for book in books if book.get("status"))
 
     print(Fore.CYAN + f"\nTotal books: {total}\n")
 
@@ -221,8 +253,9 @@ def show_statistics():
     print(Fore.GREEN + "\nBy Status:")
     for status, count in statuses.items():
         print(f"  - {status.capitalize()}: {count}")
-    
+
     print()
+
 
 def main():
     display_banner()
@@ -249,7 +282,7 @@ def main():
         else:
             print("\nInvalid option. Please try again.\n")
 
-if __name__ == "__main__":
 
+if __name__ == "__main__":
 
     main()
