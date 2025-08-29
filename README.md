@@ -108,20 +108,88 @@ All functions were tested in:
 - ✅ flask deployment
 
 ### Covered Scenarios:
-- Adding new books
-- Editing book details
-- Deleting entries
-- Searching (case-insensitive)
+- Adding new books (valid and invalid inputs)
+- Editing book details (boundary testing)
+- Deleting entries (confirmation flow)
+- Searching (case-insensitive, empty queries)
 - JSON storage & reload after restart
 - CSV export and file verification
+- Error handling for invalid menu choices
+- Input validation for book numbers
 
-### Code Quality:
-- Linted using pylint
-- Formatted with black
+### Code Quality & Validation:
+- **PEP8 Validation**: Code tested with Python linter
+  - All major PEP8 issues resolved
+  - Consistent indentation (4 spaces)
+  - Line length under 79 characters
+  - Duplicate string literals replaced with constants
+- **Manual Testing Results**: 
+  - ✅ All core features functional
+  - ✅ Error handling works as expected
+  - ✅ Data persistence confirmed
+  - ✅ User input validation active
+
+### Testing Process:
+1. **Input Validation Tests**:
+   - Invalid menu choices → Clear error message
+   - Empty book fields → Prompts for valid input
+   - Invalid book numbers → "Invalid book number" error
+2. **Data Persistence Tests**:
+   - App restart → Data retained
+   - JSON file validation → Correct structure
+3. **Feature Tests**:
+   - All CRUD operations tested
+   - Export functionality verified
+   - Search with various inputs tested
 
 ---
 
-## 🐛 Known Issues
+## � Deployment
+
+### Live Application
+- **Heroku URL**: https://mylibrapy-pp3-3db58ea9dc6b.herokuapp.com
+- **GitHub Repository**: https://github.com/freewimoe/PP3-MyLibraPy-resub
+
+### Deployment Steps (Heroku)
+
+1. **Prepare Files**:
+   - `requirements.txt` - Lists Python dependencies
+   - `Procfile` - Defines how Heroku runs the app
+   - `runtime.txt` - Specifies Python version (3.12.2)
+
+2. **Heroku Setup**:
+   ```bash
+   heroku create mylibrapy-pp3
+   git push heroku main
+   ```
+
+3. **Configure Buildpacks**:
+   - Python buildpack for backend
+   - Node.js buildpack for terminal interface
+
+4. **Environment Variables**: None required for this project
+
+### Local Development Setup
+
+1. **Clone Repository**:
+   ```bash
+   git clone https://github.com/freewimoe/PP3-MyLibraPy-resub.git
+   cd PP3-MyLibraPy-resub
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run Application**:
+   ```bash
+   python run.py
+   ```
+
+---
+
+## �🐛 Known Issues
 
 - No dropdowns or fixed status choices (user can mistype)
 - Genre & status inputs are free text
