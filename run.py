@@ -65,14 +65,34 @@ books = load_books()
 # Placeholder functions
 def add_book():
     print("\n--- Add a New Book ---")
-    title = input("Enter book title: ").strip()
-    author = input("Enter author name: ").strip()
-    genre = input("Enter genre: ").strip()
-    status = input("Enter status (read/unread/wishlist): ").strip().lower()
-
-    if not title or not author:
-        print("\n[Error] Title and author are required!\n")
-        return
+    
+    # Title validation
+    title = ""
+    while not title:
+        title = input("Enter book title: ").strip()
+        if not title:
+            print(Fore.RED + "\n[Error] Title cannot be empty. Please enter a title.\n")
+    
+    # Author validation  
+    author = ""
+    while not author:
+        author = input("Enter author name: ").strip()
+        if not author:
+            print(Fore.RED + "\n[Error] Author cannot be empty. Please enter an author.\n")
+    
+    # Genre validation
+    genre = ""
+    while not genre:
+        genre = input("Enter genre: ").strip()
+        if not genre:
+            print(Fore.RED + "\n[Error] Genre cannot be empty. Please enter a genre.\n")
+    
+    # Status validation
+    status = ""
+    while not status:
+        status = input("Enter status (read/unread/wishlist): ").strip().lower()
+        if not status:
+            print(Fore.RED + "\n[Error] Status cannot be empty. Please enter a status.\n")
 
     book = {
         "title": title,
